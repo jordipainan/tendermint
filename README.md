@@ -173,3 +173,21 @@ for-profit entity that also maintains [tendermint.com](https://tendermint.com).
 [tests-badge]: https://github.com/tendermint/tendermint/actions/workflows/tests.yml/badge.svg?branch=main
 [lint-badge]: https://github.com/tendermint/tendermint/actions/workflows/lint.yml/badge.svg
 [lint-url]: https://github.com/tendermint/tendermint/actions/workflows/lint.yml
+
+## TODO (for implementing the BN254 curve)
+
+- [x] Import gnark-crypto ECC BN254
+- [ ] Create a BN254 compatible package like crypto/ed25519 named crypto/bn254
+- [ ] Implement the following methods:
+    - [ ] Address()
+    - [ ] Bytes()
+    - [ ] Equals()
+    - [ ] Type()
+    - [ ] Sign(msg []byte)
+    - [ ] VerifySignature(signature, msg []byte)
+    - [ ] PubKey()
+    - [ ] String()
+- [ ] Test crypto/bn254 package
+- [ ] Change all crypto/ed25519 usage for crypto/bn254
+- [ ] Test (Consensus level)
+- [ ] Test (Compare current vochain with new core with BN254)
